@@ -1,0 +1,19 @@
+@mixin fluid-type(
+  $min-font-size,
+  $max-font-size,
+  $min-vw: map-get($breakpoints, 'sm'),
+  $max-vw: map-get($breakpoints, 'xl')
+) {
+  $font-size-diff: #{stripUnit($max-font-size - $min-font-size)};
+  $screen-size-diff: #{stripUnit($max-vw)} - #{stripUnit($min-vw)};
+
+  font-size: $min-font-size;
+
+  @media screen and (min-width: $min-vw) {
+    font-size: calc(#{$min-font-size} + #{$font-size-diff} * ((100vw - #{$min-vw}) / (#{$screen-size-diff})));
+  }
+
+  @media screen and (min-width: $max-vw) {
+    font-size: $max-font-size;
+  }
+}

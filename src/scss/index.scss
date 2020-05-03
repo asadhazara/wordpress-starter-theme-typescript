@@ -1,0 +1,15 @@
+/*! purgecss start ignore */
+@import '~modularscale-sass/stylesheets/modularscale';
+@import 'src/scss/mixins/fluid-type';
+@import 'src/scss/mixins/media-breakpoint-up';
+@import 'src/scss/variables';
+
+@import 'src/scss/reset';
+@import 'src/scss/typography';
+@import 'src/scss/grid';
+
+@import 'src/scss/components/menu';
+
+/*! purgecss end ignore */
+
+@tailwind utilities;

@@ -1,0 +1,61 @@
+<header data-menu="wrapper" class="menu relative z-50">
+  <div class="relative bg-white z-10 border-0 border-b border-solid border-gray-300">
+    <div class="container py-3">
+      <div class="row items-center">
+        <div class="col-auto">
+          {% set paddingBottom = (500 / 2000 * 100)|round(4) %}
+          <div class="max-w-full relative"
+            style="width: 100px; padding-bottom: {{ paddingBottom }}%">
+            {% include 'components/logo.twig' %}
+          </div>
+        </div>
+        <div class="col small">
+          <div class="row is-tight">
+            <div class="col-auto">
+              Connect
+            </div>
+          </div>
+        </div>
+        <div class="col-auto flex">
+          <button data-menu="toggle"
+            aria-label="Menu toggle (closed)"
+            class="menu__toggle">
+            <div class="menu__icon">
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span data-menu="overlay"
+    class="menu__overlay hidden"
+    aria-label="Menu Overlay"
+    aria-hidden="true">
+
+  </span>
+  <div data-menu="drawer"
+    class="menu__drawer hidden"
+    aria-label="Menu Drawer"
+    aria-hidden="true">
+    <div data-menu="content" class="menu__content container py-8">
+      <div class="row mb-6">
+        <div class="col-6">
+          <ul>
+            <li class="h2 font-normal">Onze diensten</li>
+            <li class="h2 font-normal">Over ons</li>
+            <li class="h2 font-normal">Nieuws</li>
+            <li class="h2 font-normal">Contact</li>
+          </ul>
+        </div>
+        <div class="col">sdfs</div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="bg-black hover:shadow-md py-3 px-6 text-white">Neem contact met ons</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

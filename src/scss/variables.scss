@@ -1,0 +1,13 @@
+$breakpoints: (
+  xs: 0,
+  sm: theme('screens.sm'),
+  md: theme('screens.md'),
+  lg: theme('screens.lg'),
+  xl: theme('screens.xl')
+) !default;
+
+// modular typography scale
+$modularscale: (
+  base: 18px 1140px 12px,
+  ratio: 1.3,
+);

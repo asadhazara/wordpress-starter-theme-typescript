@@ -1,0 +1,108 @@
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+    url($PUBLIC_PATH + 'fonts/ssp-regular.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ssp-regular.woff') format('woff');
+}
+/* source-sans-pro-600 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
+    url($PUBLIC_PATH + 'fonts/ssp-600.woff2') format('woff2'), url($PUBLIC_PATH + 'fonts/ssp-600.woff') format('woff');
+}
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+    url($PUBLIC_PATH + 'fonts/ssp-700.woff2') format('woff2'), url($PUBLIC_PATH + 'fonts/ssp-700.woff') format('woff');
+}
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-regular.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-regular.woff') format('woff');
+}
+/* ubuntu-500 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url($PUBLIC_PATH + 'fonts/ubuntu-500.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-500.woff') format('woff');
+}
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url($PUBLIC_PATH + 'fonts/ubuntu-700.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-700.woff') format('woff');
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+
+  @include fluid-type(ms(0), ms(2));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  @include fluid-type(ms(6), ms(8));
+}
+
+h2,
+.h2 {
+  @include fluid-type(ms(5), ms(7));
+}
+
+h3,
+.h3 {
+  @include fluid-type(ms(4), ms(6));
+}
+
+h4,
+.h4 {
+  @include fluid-type(ms(3), ms(5));
+}
+
+h5,
+.h5 {
+  @include fluid-type(ms(2), ms(4));
+}
+
+h6,
+.h5 {
+  @include fluid-type(ms(1), ms(3));
+}
+
+small,
+.small {
+  @include fluid-type(ms(-1), ms(1));
+}
+
+p,
+.p {
+  @include fluid-type(ms(0), ms(2));
+}

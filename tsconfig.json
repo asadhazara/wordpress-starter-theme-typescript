@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "sourceMap": true,
+    "allowJs": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "vendor", "assets", "*.config.js"]
+}

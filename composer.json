@@ -1,0 +1,22 @@
+{
+  "name": "zorrilla/zorrilla-theme",
+  "description": "Wordpress theme voor zorrillamedia.nl.",
+  "authors": [
+    {
+      "name": "Asad Hazara",
+      "email": "asad@zorrillamedia.nl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Lib\\": "./lib"
+    }
+  },
+  "require-dev": {
+    "php-stubs/wordpress-stubs": "^5.3"
+  },
+  "require": {
+    "symfony/var-dumper": "^5.0",
+    "timber/timber": "^1.15"
+  }
+}
