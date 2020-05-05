@@ -1,99 +1,57 @@
+%transition {
+  @apply duration-300;
+  transition-property: visibility, opacity, transform;
+  transition-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+}
+
+%delay-0 {
+  @apply delay-0;
+}
+
+%delay-1 {
+  @apply delay-300;
+}
+
 .menu {
   $self: &;
 
   &.is-open {
     #{ $self }__icon {
       > span {
-        @apply delay-0;
+        @extend %delay-0;
         transform: translateY(0);
 
         &:first-child::before {
-          @apply delay-300;
+          @extend %delay-1;
           transform: translateY(-50%) rotate(45deg);
         }
 
         &:last-child::before {
-          @apply delay-300;
+          @extend %delay-1;
           transform: translateY(-50%) rotate(-45deg);
         }
       }
     }
 
-    #{ $self }__overlay,
-    #{ $self }__drawer,
-    #{ $self }__content {
-      @apply visible;
-    }
-
-    #{ $self }__overlay,
-    #{ $self }__drawer {
-      @apply delay-0;
-    }
-
-    #{ $self }__drawer,
-    #{ $self }__content {
-      @apply opacity-100;
-    }
-
     #{ $self }__overlay {
+      @extend %delay-0;
       @apply opacity-25;
+      @apply visible;
       @apply pointer-events-auto;
     }
 
     #{ $self }__drawer {
+      @extend %delay-0;
+      @apply opacity-100;
+      @apply visible;
       transform: translateY(0);
     }
 
     #{ $self }__content {
-      @apply delay-500;
+      @extend %delay-1;
+      @apply opacity-100;
+      @apply visible;
     }
-  }
-
-  &__icon > span,
-  &__icon > span::before,
-  &__overlay,
-  &__drawer {
-    @apply duration-300;
-    @apply w-full;
-
-    transition-property: visibility, opacity, transform;
-    transition-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
-  }
-
-  &__icon > span,
-  &__icon > span::before,
-  &__drawer,
-  &__overlay {
-    @apply left-0;
-  }
-
-  &__icon > span,
-  &__icon > span::before,
-  &__drawer {
-    @apply absolute;
-  }
-
-  &__overlay,
-  &__drawer,
-  &__content {
-    @apply opacity-0;
-    @apply invisible;
-  }
-
-  &__icon > span,
-  &__overlay {
-    @apply top-0;
-    @apply h-full;
-  }
-
-  &__icon > span::before,
-  &__overlay {
-    @apply bg-black;
-  }
-
-  &__overlay,
-  &__drawer {
-    @apply delay-300;
   }
 
   &__toggle {
@@ -105,24 +63,30 @@
     @apply w-6;
     @apply relative;
 
-    > span,
-    > span::before {
-      @apply block;
-    }
-
-    > span::before,
-    > span:first-child {
-      transform: translateY(-50%);
-    }
-
     > span {
+      @extend %transition;
+      @extend %delay-1;
+      @apply absolute;
+      @apply block;
+      @apply w-full;
+      @apply h-full;
       @apply origin-center;
-      @apply delay-300;
 
       &::before {
+        @extend %transition;
+        @apply absolute;
+        @apply block;
+        @apply w-full;
+        @apply bg-black;
+        @apply left-0;
         @apply top-half;
         content: '';
         height: 2px;
+        transform: translateY(-50%);
+      }
+
+      &:first-child {
+        transform: translateY(-50%);
       }
 
       &:last-child {
@@ -132,18 +96,35 @@
   }
 
   &__overlay {
+    @extend %transition;
+    @extend %delay-1;
     @apply fixed;
+    @apply top-0;
+    @apply w-full;
+    @apply h-full;
+    @apply bg-black;
+    @apply opacity-0;
+    @apply invisible;
     @apply pointer-events-none;
   }
 
   &__drawer {
+    @extend %transition;
+    @extend %delay-1;
+    @apply absolute;
     @apply top-full;
+    @apply left-0;
+    @apply w-full;
     @apply shadow-md;
     @apply bg-white;
+    @apply opacity-0;
+    @apply invisible;
     transform: translateY(-100%);
   }
 
   &__content {
-    @apply duration-500;
+    @extend %transition;
+    @apply opacity-0;
+    @apply invisible;
   }
 }

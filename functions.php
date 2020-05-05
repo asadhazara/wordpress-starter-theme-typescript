@@ -1,5 +1,6 @@
 <?php
 
+use Dotenv\Dotenv;
 use Lib\Init;
 use Timber\Timber;
 
@@ -8,10 +9,16 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly.
 if (file_exists(dirname(__FILE__) . '/vendor/autoload.php'))
     require_once dirname(__FILE__) . '/vendor/autoload.php';
 
+// load .env
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Constants
 define('THEME_DIR', get_template_directory());
 define('THEME_URI', get_template_directory_uri());
 define('THEME_VERSION', '0.0.1');
+define('THEME_LOCAL', $_ENV['LOCAL'] === '1');
+define('THEME_TEXT_DOMAIN', 'zorrilla');
 
 // Initialize funtions
 Init::registerServices();

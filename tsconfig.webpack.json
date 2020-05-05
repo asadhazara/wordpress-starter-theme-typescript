@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": true,
+    "target": "es5",
+    "esModuleInterop": true,
+    "noImplicitAny": false
+  },
+  "exclude": ["node_modules", "vendor", "assets", "*.config.js"]
+}

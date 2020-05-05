@@ -1,0 +1,50 @@
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+    url($PUBLIC_PATH + 'fonts/ssp-regular.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ssp-regular.woff') format('woff');
+}
+/* source-sans-pro-600 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
+    url($PUBLIC_PATH + 'fonts/ssp-600.woff2') format('woff2'), url($PUBLIC_PATH + 'fonts/ssp-600.woff') format('woff');
+}
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+    url($PUBLIC_PATH + 'fonts/ssp-700.woff2') format('woff2'), url($PUBLIC_PATH + 'fonts/ssp-700.woff') format('woff');
+}
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-regular.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-regular.woff') format('woff');
+}
+/* ubuntu-500 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url($PUBLIC_PATH + 'fonts/ubuntu-500.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-500.woff') format('woff');
+}
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url($PUBLIC_PATH + 'fonts/ubuntu-700.woff2') format('woff2'),
+    url($PUBLIC_PATH + 'fonts/ubuntu-700.woff') format('woff');
+}

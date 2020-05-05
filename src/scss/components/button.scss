@@ -1,0 +1,10 @@
+.button {
+  @apply py-3;
+  @apply px-6;
+  @apply bg-primary;
+  @apply text-white;
+
+  &:hover {
+    @apply shadow-md;
+  }
+}

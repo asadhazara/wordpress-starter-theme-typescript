@@ -74,7 +74,7 @@ $grid-columns: 12 !default;
     @extend %grid-column;
   }
 
-  @include media-breakpoint-up($breakpoint-key, $min-breakpoint) {
+  @include media-up($breakpoint-key, $min-breakpoint) {
     .#{$prefix}col {
       @apply max-w-full;
       @apply flex-grow;

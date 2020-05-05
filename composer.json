@@ -17,6 +17,7 @@
   },
   "require": {
     "symfony/var-dumper": "^5.0",
-    "timber/timber": "^1.15"
+    "timber/timber": "^1.15",
+    "vlucas/phpdotenv": "^4.1"
   }
 }

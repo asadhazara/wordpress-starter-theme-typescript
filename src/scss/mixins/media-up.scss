@@ -1,4 +1,4 @@
-@mixin media-breakpoint-up($key, $min) {
+@mixin media-up($key, $min) {
   @if $min {
     @media (min-width: $min) {
       @content;

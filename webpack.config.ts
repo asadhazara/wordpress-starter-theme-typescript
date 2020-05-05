@@ -1,8 +1,9 @@
-import PostPurge from '@fullhuman/postcss-purgecss';
 import autoprefixer from 'autoprefixer';
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import dotenv from 'dotenv';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import path from 'path';
 import postcssFn from 'postcss-functions';
@@ -15,11 +16,6 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 dotenv.config();
 
 const prod = process.env.NODE_ENV === 'production';
-
-const purgecss = PostPurge({
-  content: ['templates/**/*.twig', 'src/**/*.tsx'],
-  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-});
 
 const cssExtraction = [
   { loader: 'file-loader', options: { name: 'css/[name].min.css' } },
@@ -58,6 +54,7 @@ const config: Configuration = {
   watch: !prod,
   entry: {
     index: 'src/index.ts',
+    admin: 'src/admin.ts',
   },
   mode: prod ? 'production' : 'development',
   devtool: !prod ? '#cheap-module-eval-source-map' : false,
@@ -112,7 +109,7 @@ const config: Configuration = {
             loader: 'postcss-loader',
             options: {
               sourceMap: !prod,
-              plugins: [tailwindcss, cssFunctions, autoprefixer(), ...(prod ? [purgecss] : [])],
+              plugins: [tailwindcss, cssFunctions, autoprefixer()],
             },
           },
           {
@@ -129,7 +126,6 @@ const config: Configuration = {
   ...(prod ? optimization : {}), // only optimize files on production
   plugins: [
     new ProgressPlugin(),
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new DefinePlugin({
       // 'process.env.SECRET_KEY': process.env.SECRET_KEY
     }),
@@ -138,7 +134,20 @@ const config: Configuration = {
       { from: '**/*', to: 'images', context: 'src/images' },
       { from: '**/*', to: 'data', context: 'src/data' },
     ]),
-    ...[process.env.DEBUG === '1' && new BundleAnalyzerPlugin()].filter((val) => val),
+    ...(prod ? [new CleanWebpackPlugin({ cleanStaleWebpackAssets: false })] : []),
+    ...(prod ? [new ForkTsCheckerWebpackPlugin()] : []),
+    ...(process.env.DEBUG === '1' ? [new BundleAnalyzerPlugin()] : []),
+    ...(prod === false
+      ? [
+          new BrowserSyncPlugin({
+            proxy: process.env.APP_URL,
+            files: ['**/*.php', '**/*.twig'],
+            ignore: ['vendor'],
+            ghostMode: false,
+            open: false,
+          }),
+        ]
+      : []),
   ],
 };
 

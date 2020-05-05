@@ -4,9 +4,10 @@
 @import 'fonts';
 @import 'variables';
 
-@import 'reset';
-@import 'typography';
-@import 'grid';
+.wp-block .is-block-content {
+  @import 'typography';
+  @import 'grid';
+  @import 'utilities';
+}
 
-@import 'components/menu';
-@import 'components/button';
+

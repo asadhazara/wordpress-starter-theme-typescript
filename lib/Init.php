@@ -2,11 +2,15 @@
 
 namespace Lib;
 
+use Lib\Admin\AdminMenu;
 use Lib\Base\Activate;
 use Lib\Base\NavMenu;
 use Lib\Base\Enqueue;
 use Lib\Base\Support;
 use Lib\Base\Twig;
+use Lib\Blocks\BlockCategory;
+use Lib\Blocks\CustomBlockType;
+use Lib\Posts\CustomPostType;
 use Timber\Timber;
 
 final class Init
@@ -22,8 +26,12 @@ final class Init
       Timber::class,
       Enqueue::class,
       Support::class,
+      AdminMenu::class,
       NavMenu::class,
       Twig::class,
+      BlockCategory::class,
+      CustomBlockType::class,
+      CustomPostType::class
     ];
   }
 
