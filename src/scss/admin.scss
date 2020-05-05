@@ -1,13 +1,10 @@
 @import '~modularscale-sass/stylesheets/modularscale';
 @import 'mixins/fluid';
 @import 'mixins/media-up';
-@import 'fonts';
 @import 'variables';
+@import 'fonts';
 
-.wp-block .is-block-content {
-  @import 'typography';
+.wp-block .is-block-content .use-utilities {
   @import 'grid';
-  @import 'utilities';
+  @import 'typography';
 }
-
-

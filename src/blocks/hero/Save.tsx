@@ -8,10 +8,15 @@ const Save: ComponentType<BlockSaveProps<HeroAttributes>> = ({ attributes }) => 
 
   return (
     <Fragment>
-      <div className={classnames('container')}>
+      <div className={classnames('container py-24')}>
         <div className="row">
-          <div className={classnames('col')}>Column 1</div>
-          <div className={classnames('col')}>Column 2</div>
+          <div className={classnames('col-12 md:col-10')}>
+            <h1 className="mb-6">
+              We help brands and businesses achieve their goals, accelerate growth and win customers through web design
+              and development.
+            </h1>
+            <p>Web design and development</p>
+          </div>
         </div>
       </div>
       <div className="relative w-full bg-red" style={{ height: 500 }}>

@@ -29,6 +29,7 @@ class Enqueue
     if (THEME_LOCAL) return;
 
     wp_enqueue_style('zorrilla.admin', THEME_URI . '/assets/css/admin.min.css', array(), THEME_VERSION, 'all');
+    wp_enqueue_style('zorrilla.utilities', THEME_URI . '/assets/css/utilities.min.css', array(), THEME_VERSION, 'all');
   }
 
   function wpEnqueue()

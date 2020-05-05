@@ -1,50 +1,36 @@
-/* source-sans-pro-regular - latin */
+/* jost-regular - latin */
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Jost';
   font-style: normal;
   font-weight: 400;
-  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
-    url($PUBLIC_PATH + 'fonts/ssp-regular.woff2') format('woff2'),
-    url($PUBLIC_PATH + 'fonts/ssp-regular.woff') format('woff');
+  src: local(''),
+       url($PUBLIC_PATH + 'fonts/jost-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url($PUBLIC_PATH + 'fonts/jost-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* source-sans-pro-600 - latin */
+/* jost-500 - latin */
 @font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
-    url($PUBLIC_PATH + 'fonts/ssp-600.woff2') format('woff2'), url($PUBLIC_PATH + 'fonts/ssp-600.woff') format('woff');
-}
-/* source-sans-pro-700 - latin */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
-    url($PUBLIC_PATH + 'fonts/ssp-700.woff2') format('woff2'), url($PUBLIC_PATH + 'fonts/ssp-700.woff') format('woff');
-}
-/* ubuntu-regular - latin */
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
-    url($PUBLIC_PATH + 'fonts/ubuntu-regular.woff2') format('woff2'),
-    url($PUBLIC_PATH + 'fonts/ubuntu-regular.woff') format('woff');
-}
-/* ubuntu-500 - latin */
-@font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Jost';
   font-style: normal;
   font-weight: 500;
-  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url($PUBLIC_PATH + 'fonts/ubuntu-500.woff2') format('woff2'),
-    url($PUBLIC_PATH + 'fonts/ubuntu-500.woff') format('woff');
+  src: local(''),
+       url($PUBLIC_PATH + 'fonts/jost-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url($PUBLIC_PATH + 'fonts/jost-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* ubuntu-700 - latin */
+/* jost-700 - latin */
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Jost';
   font-style: normal;
   font-weight: 700;
-  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url($PUBLIC_PATH + 'fonts/ubuntu-700.woff2') format('woff2'),
-    url($PUBLIC_PATH + 'fonts/ubuntu-700.woff') format('woff');
+  src: local(''),
+       url($PUBLIC_PATH + 'fonts/jost-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url($PUBLIC_PATH + 'fonts/jost-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-italic - latin */
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url($PUBLIC_PATH + 'fonts/jost-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url($PUBLIC_PATH + 'fonts/jost-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }

@@ -1,4 +1,5 @@
 const config = {
+  important: '.use-utilities',
   purge: {
     content: ['templates/**/*.twig', 'src/**/*.tsx'],
   },

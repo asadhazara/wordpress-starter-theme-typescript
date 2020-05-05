@@ -1,7 +1,7 @@
 body,
 p,
 small {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Jost', #{theme('fontFamily.sans')};
   line-height: 1.5;
 
   @include fluid('font-size', ms(0), ms(2));
@@ -13,7 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Jost', #{theme('fontFamily.sans')};
   font-weight: 500;
   line-height: 1.3;
 }
