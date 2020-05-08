@@ -2,6 +2,7 @@
 
 namespace Lib;
 
+use Lib\Admin\ACFSettings;
 use Lib\Admin\AdminMenu;
 use Lib\Base\Activate;
 use Lib\Base\NavMenu;
@@ -23,6 +24,7 @@ final class Init
   {
     return [
       Activate::class,
+      ACFSettings::class,
       Timber::class,
       Enqueue::class,
       Support::class,

@@ -11,5 +11,5 @@
     "esModuleInterop": true,
     "noImplicitAny": true
   },
-  "exclude": ["node_modules", "vendor", "assets", "*.config.js"]
+  "exclude": ["node_modules", "vendor", "assets", "*.config.js", "lib"]
 }
