@@ -19,8 +19,8 @@ define('THEME_URI', get_template_directory_uri());
 define('THEME_VERSION', '0.0.1');
 define('THEME_LOCAL', $_ENV['LOCAL'] === '1');
 define('THEME_TEXT_DOMAIN', 'zorrilla');
-define( 'MY_ACF_PATH', THEME_DIR . '/lib/plugins/acf/' );
-define( 'MY_ACF_URL', THEME_URI . '/lib/plugins/acf/' );
+define('MY_ACF_PATH', THEME_DIR . '/vendor/advanced-custom-fields/advanced-custom-fields-pro/acf/');
+define('MY_ACF_URL', THEME_URI . '/vendor/advanced-custom-fields/advanced-custom-fields-pro/acf/');
 
 // Include the ACF plugin.
 include_once( MY_ACF_PATH . 'acf.php' );

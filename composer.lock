@@ -4,8 +4,17 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de7471f1fd1db245327b33ddeff3b90c",
+    "content-hash": "0fa093aa805f4660111eefa097d22b5f",
     "packages": [
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-pro",
+            "version": "5.8.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTQ1NDI3fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOC0xMS0yMyAxNDo0MjozNQ=="
+            },
+            "type": "library"
+        },
         {
             "name": "altorouter/altorouter",
             "version": "v1.2.0",

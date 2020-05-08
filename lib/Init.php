@@ -2,6 +2,7 @@
 
 namespace Lib;
 
+use ACF;
 use Lib\Admin\ACFSettings;
 use Lib\Admin\AdminMenu;
 use Lib\Base\Activate;
