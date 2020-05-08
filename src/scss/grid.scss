@@ -12,39 +12,7 @@ $grid-columns: 12 !default;
   @apply flex-wrap;
   @apply -mx-4;
 
-  > .col,
-  > [class*='col-'] {
-    @apply px-4;
-  }
-
-  &.is-tight {
-    @apply -mx-3;
-
-    > .col,
-    > [class*='col-'] {
-      @apply px-3;
-    }
-  }
-
-  &.is-tighter {
-    @apply -mx-2;
-
-    > .col,
-    > [class*='col-'] {
-      @apply px-2;
-    }
-  }
-
-  &.is-tightest {
-    @apply -mx-1;
-
-    > .col,
-    > [class*='col-'] {
-      @apply px-1;
-    }
-  }
-
-  &.is-gutterless {
+  &--gutterless {
     @apply mx-0;
 
     > .col,
@@ -54,41 +22,31 @@ $grid-columns: 12 !default;
   }
 }
 
-%grid-column {
+.col {
   @apply relative;
   @apply w-full;
+  @apply px-4;
 }
 
 @each $breakpoint-key, $breakpoint-value in $breakpoints {
   $min-breakpoint: if($breakpoint-value != 0, $breakpoint-value, null);
   $prefix: if($min-breakpoint == null, '', '#{$breakpoint-key}\\:');
 
-  @for $i from 1 through $grid-columns {
-    .#{$prefix}col-#{$i} {
-      @extend %grid-column;
-    }
-  }
-
-  .#{$prefix}col,
-  .#{$prefix}col-auto {
-    @extend %grid-column;
-  }
-
   @include media-up($breakpoint-key, $min-breakpoint) {
-    .#{$prefix}col {
+    .#{$prefix}col--grow {
       @apply max-w-full;
       @apply flex-grow;
       flex-basis: 0;
     }
 
-    .#{$prefix}col-auto {
+    .#{$prefix}col--auto {
       flex: 0 0 auto;
       @apply w-auto;
       @apply max-w-full;
     }
 
     @for $i from 1 through $grid-columns {
-      .#{$prefix}col-#{$i} {
+      .#{$prefix}col--#{$i} {
         $num: $i / $grid-columns;
         flex: 0 0 percentage($num);
         max-width: percentage($num);
@@ -97,7 +55,7 @@ $grid-columns: 12 !default;
 
     @for $i from 0 through ($grid-columns - 1) {
       @if not($prefix == '' and $i == 0) {
-        .#{$prefix}offset-#{$i} {
+        .#{$prefix}offset--#{$i} {
           $num: $i / $grid-columns;
           margin-left: if($num == 0, 0, percentage($num));
         }

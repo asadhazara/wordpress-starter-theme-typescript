@@ -1,7 +1,7 @@
 body,
 p,
 small {
-  font-family: 'Jost', #{theme('fontFamily.sans')};
+  font-family: 'Open Sans', #{theme('fontFamily.serif')};
   line-height: 1.5;
 
   @include fluid('font-size', ms(0), ms(2));
@@ -13,8 +13,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Jost', #{theme('fontFamily.sans')};
-  font-weight: 500;
+  font-family: 'Poppins', #{theme('fontFamily.serif')};
+  font-weight: 600;
   line-height: 1.3;
 }
 

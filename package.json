@@ -81,7 +81,6 @@
     "ally.js": "^1.4.1",
     "animejs": "^3.2.0",
     "classnames": "^2.2.6",
-    "lodash": "^4.17.15",
     "objectFitPolyfill": "^2.3.0",
     "rxjs": "^6.5.5"
   }

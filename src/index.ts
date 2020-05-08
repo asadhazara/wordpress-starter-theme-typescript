@@ -20,6 +20,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   import(
     /* webpackPrefetch: true */
     /* webpackChunkName: "menu" */
-    'src/components/menu'
+    'src/modules/menu'
   );
 });

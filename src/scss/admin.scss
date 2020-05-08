@@ -4,7 +4,8 @@
 @import 'variables';
 @import 'fonts';
 
-.wp-block .is-block-content .use-utilities {
+.wp-block .is-block-content {
+  @import 'reset';
   @import 'grid';
   @import 'typography';
 }

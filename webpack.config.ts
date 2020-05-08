@@ -72,6 +72,7 @@ const config: Configuration = {
   },
   externals: {
     react: 'React',
+    lodash: ['lodash'],
     'react-dom': 'ReactDOM',
     '@wordpress/blocks': ['wp', 'blocks'],
     '@wordpress/compose': ['wp', 'compose'],

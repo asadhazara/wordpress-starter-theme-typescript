@@ -16,7 +16,7 @@
 
       {{ function('wp_head') }}
     </head>
-    <body class="{{ body_class }} use-utilities">
+    <body id="wpbody" class="{{ body_class }}">
       {% include 'components/header.twig' %}
 
       {% block main %}

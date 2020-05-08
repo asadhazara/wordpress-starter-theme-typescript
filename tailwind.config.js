@@ -1,5 +1,5 @@
 const config = {
-  important: '.use-utilities',
+  important: '#wpbody',
   purge: {
     content: ['templates/**/*.twig', 'src/**/*.tsx'],
   },

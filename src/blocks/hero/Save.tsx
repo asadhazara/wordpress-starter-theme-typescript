@@ -1,21 +1,19 @@
+import { RichText } from '@wordpress/block-editor';
 import type { BlockSaveProps } from '@wordpress/blocks';
 import classnames from 'classnames';
-import { ComponentType, Fragment } from 'react';
+import { ComponentType } from 'react';
 import type { HeroAttributes } from 'src/blocks/hero';
 
 const Save: ComponentType<BlockSaveProps<HeroAttributes>> = ({ attributes }) => {
-  const { backgroundImage } = attributes;
+  const { backgroundImage, headline, text } = attributes;
 
   return (
-    <Fragment>
+    <section>
       <div className={classnames('container py-24')}>
         <div className="row">
-          <div className={classnames('col-12 md:col-10')}>
-            <h1 className="mb-6">
-              We help brands and businesses achieve their goals, accelerate growth and win customers through web design
-              and development.
-            </h1>
-            <p>Web design and development</p>
+          <div className={classnames('col col--12 md:col--10')}>
+            <RichText.Content className="mb-6" value={headline} tagName="h1" />
+            <RichText.Content value={text} tagName="p" />
           </div>
         </div>
       </div>
@@ -30,7 +28,7 @@ const Save: ComponentType<BlockSaveProps<HeroAttributes>> = ({ attributes }) => 
           />
         )}
       </div>
-    </Fragment>
+    </section>
   );
 };
 
