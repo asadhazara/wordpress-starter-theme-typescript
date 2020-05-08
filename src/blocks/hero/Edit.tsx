@@ -29,8 +29,7 @@ const Edit: ComponentType<BlockEditProps<HeroAttributes>> = ({ attributes, setAt
       <div className={classnames('relative w-full', { 'bg-gray-200': !backgroundImage })} style={{ height: 500 }}>
         {backgroundImage && (
           <img
-            className="absolute left-0 top-0 object-cover object-center"
-            style={{ height: '100%', width: '100%' }}
+            className="absolute left-0 top-0 h-full w-full object-cover object-center"
             src={backgroundImage.src}
             srcSet={backgroundImage.srcSet}
             alt={backgroundImage.alt}

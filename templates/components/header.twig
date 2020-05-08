@@ -2,12 +2,12 @@
   <div class="relative bg-white z-10 border-0 border-b border-solid border-gray-300">
     <div class="container py-3">
       <div class="row items-center">
-        <div class="col--auto">
+        <div class="col col--auto">
           {% set paddingBottom = (500 / 2000 * 100)|round(4) %}
-          <div class="max-w-full relative"
+          <a href="{{ site.url }}" aria-label="{{ site.name }} - logo" class="block max-w-full relative"
             style="width: 100px; padding-bottom: {{ paddingBottom }}%">
             {% include 'components/logo.twig' %}
-          </div>
+          </a>
         </div>
         <div class="col col--grow flex justify-end">
           <button data-menu="toggle"
@@ -26,7 +26,6 @@
     class="menu__overlay hidden"
     aria-label="Menu Overlay"
     aria-hidden="true">
-
   </span>
   <div data-menu="drawer"
     class="menu__drawer hidden"

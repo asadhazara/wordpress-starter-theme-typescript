@@ -17,11 +17,10 @@ const Save: ComponentType<BlockSaveProps<HeroAttributes>> = ({ attributes }) => 
           </div>
         </div>
       </div>
-      <div className="relative w-full bg-red" style={{ height: 500 }}>
+      <div className={classnames('relative w-full', { 'bg-gray-200': !backgroundImage })} style={{ height: 500 }}>
         {backgroundImage && (
           <img
-            className="absolute left-0 top-0 object-cover object-center"
-            style={{ height: '100%', width: '100%' }}
+            className="absolute left-0 top-0 h-full w-full object-cover object-center"
             src={backgroundImage.src}
             srcSet={backgroundImage.srcSet}
             alt={backgroundImage.alt}
