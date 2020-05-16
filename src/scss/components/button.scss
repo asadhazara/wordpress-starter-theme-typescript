@@ -3,6 +3,7 @@
   @apply px-6;
   @apply bg-primary;
   @apply text-white;
+  @apply rounded-none;
 
   &:hover {
     @apply shadow-md;

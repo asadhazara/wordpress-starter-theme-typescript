@@ -1,20 +1,51 @@
+/* eslint-disable */
+const { map } = require('lodash');
+const plugin = require('tailwindcss/plugin');
+/* eslint-enable */
+
 const config = {
   important: '#wpbody',
   purge: {
-    content: ['templates/**/*.twig', 'src/**/*.tsx'],
+    content: ['templates/**/*.twig', 'src/**/*.{ts,tsx}'],
   },
   theme: {
     extend: {
+      fontFamily: {
+        openSans: '"Open Sans", sans-serif',
+        poppins: '"Poppins", sans-serif',
+      },
+      inset: (theme) => ({
+        half: '50%',
+        full: '100%',
+        2: theme('space.2'),
+        4: theme('space.4'),
+        6: theme('space.6'),
+      }),
+      opacity: {
+        60: '0.6',
+      },
+      padding: {
+        '1/3': `${(1 / 3) * 100}%`,
+        '1/2': `${(1 / 2) * 100}%`,
+        '3/4': `${(3 / 4) * 100}%`,
+      },
       transitionDelay: {
         '0': '0ms',
       },
-      height: {},
-      inset: {
-        half: '50%',
-        full: '100%',
+      zIndex: {
+        '-1': '-1',
+        '1': '1',
       },
     },
+    screens: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     colors: {
+      transparent: 'transparent',
       primary: '#F42C04',
       black: '#000000',
       white: '#FFFFFF',

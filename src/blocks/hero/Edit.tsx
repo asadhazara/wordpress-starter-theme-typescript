@@ -12,11 +12,11 @@ const Edit: ComponentType<BlockEditProps<HeroAttributes>> = ({ attributes, setAt
   return (
     <Fragment>
       <Inspector attributes={attributes} setAttributes={setAttributes} />
-      <div className={classnames('container py-24', className)}>
+      <div className={classnames('container pt-24 pb-12', className)}>
         <div className="row">
           <div className={classnames('col col--12 md:col--10')}>
             <RichText
-              className="mb-6"
+              className="mb-4"
               value={headline}
               tagName="h1"
               onChange={(headline) => setAttributes({ headline })}
@@ -35,6 +35,20 @@ const Edit: ComponentType<BlockEditProps<HeroAttributes>> = ({ attributes, setAt
             alt={backgroundImage.alt}
           />
         )}
+      </div>
+      <div className={classnames('container pt-12 pb-24', className)}>
+        <div className="row">
+          <div className={classnames('col col--12 md:col--10')}>
+            <RichText
+              className="mb-8"
+              value={headline}
+              tagName="h1"
+              onChange={(headline) => setAttributes({ headline })}
+              placeholder="Headline..."
+            />
+            <div className="button p">Bekijk het resultaat</div>
+          </div>
+        </div>
       </div>
     </Fragment>
   );

@@ -1,9 +1,17 @@
-body,
-p,
-small {
-  font-family: 'Open Sans', #{theme('fontFamily.serif')};
-  line-height: 1.5;
+@import '~modularscale-sass/stylesheets/modularscale';
+@import 'fonts';
 
+// modular typography scale
+$modularscale: (
+  base: 18px 1140px 12px,
+  ratio: 1.3,
+);
+
+body {
+  @apply font-openSans;
+  @apply font-normal;
+  @apply leading-normal;
+  
   @include fluid('font-size', ms(0), ms(2));
 }
 
@@ -13,39 +21,39 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Poppins', #{theme('fontFamily.serif')};
-  font-weight: 600;
-  line-height: 1.3;
+  @apply font-poppins;
+  @apply font-semibold;
+  @apply leading-tight;
 }
 
 h1,
 .h1 {
-  @include fluid('font-size', ms(6), ms(8));
+  @include fluid('font-size', ms(5), ms(8));
 }
 
 h2,
 .h2 {
-  @include fluid('font-size', ms(5), ms(7));
+  @include fluid('font-size', ms(4), ms(7));
 }
 
 h3,
 .h3 {
-  @include fluid('font-size', ms(4), ms(6));
+  @include fluid('font-size', ms(3), ms(6));
 }
 
 h4,
 .h4 {
-  @include fluid('font-size', ms(3), ms(5));
+  @include fluid('font-size', ms(2), ms(5));
 }
 
 h5,
 .h5 {
-  @include fluid('font-size', ms(2), ms(4));
+  @include fluid('font-size', ms(1), ms(4));
 }
 
 h6,
-.h5 {
-  @include fluid('font-size', ms(1), ms(3));
+.h6 {
+  @include fluid('font-size', ms(0), ms(3));
 }
 
 small,
@@ -53,7 +61,10 @@ small,
   @include fluid('font-size', ms(-1), ms(1));
 }
 
-p,
-.p {
-  @include fluid('font-size', ms(0), ms(2));
+.smaller {
+  @include fluid('font-size', ms(-2), ms(0));
+}
+
+.smallest {
+  @include fluid('font-size', ms(-3), ms(-1));
 }

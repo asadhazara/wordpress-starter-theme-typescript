@@ -35,7 +35,7 @@
 
     #{ $self }__overlay {
       @extend %delay-0;
-      @apply opacity-25;
+      @apply opacity-50;
       @apply visible;
       @apply pointer-events-auto;
     }
@@ -52,6 +52,36 @@
       @apply opacity-100;
       @apply visible;
     }
+  }
+
+  &.is-dark {
+    @apply text-white;
+
+    #{ $self }__bar {
+      @apply bg-black;
+      @apply border-transparent;
+    }
+
+    #{ $self }__drawer {
+      @apply bg-black;
+      @apply border-gray-800;
+    }
+
+    #{ $self }__icon {
+      > span {
+        &::before {
+          @apply bg-white;
+        }
+      }
+    }
+  }
+
+  &__bar {
+    @apply bg-white;
+    @apply border-0;
+    @apply border-b;
+    @apply border-solid;
+    @apply border-gray-300;
   }
 
   &__toggle {
@@ -115,10 +145,13 @@
     @apply top-full;
     @apply left-0;
     @apply w-full;
-    @apply shadow-md;
+    @apply shadow-lg;
     @apply bg-white;
     @apply opacity-0;
     @apply invisible;
+    @apply border-0;
+    @apply border-b;
+    @apply border-solid;
     transform: translateY(-100%);
   }
 

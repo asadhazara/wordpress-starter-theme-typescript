@@ -44,6 +44,7 @@ export const Inspector: FC<Pick<BlockEditProps<HeroAttributes>, 'attributes' | '
         <MediaUpload
           value={backgroundImage?.id}
           onSelect={onBackgroundImageSelect}
+          allowedTypes={['image']}
           render={({ open }) => (
             <Button
               onClick={open}

@@ -19,7 +19,8 @@
     "symfony/var-dumper": "^5.0",
     "timber/timber": "^1.15",
     "vlucas/phpdotenv": "^4.1",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8"
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8",
+    "cbschuld/browser.php": "^1.9"
   },
   "repositories": [
     {

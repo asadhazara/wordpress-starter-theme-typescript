@@ -22,4 +22,11 @@ window.addEventListener('DOMContentLoaded', async () => {
     /* webpackChunkName: "menu" */
     'src/modules/menu'
   );
+
+  // stacked component
+  import(
+    /* webpackPrefetch: true */
+    /* webpackChunkName: "menu" */
+    'src/modules/stacked'
+  );
 });

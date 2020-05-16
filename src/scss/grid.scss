@@ -1,3 +1,12 @@
+$breakpoints: (
+  zero: 0,
+  xs: theme('screens.xs'),
+  sm: theme('screens.sm'),
+  md: theme('screens.md'),
+  lg: theme('screens.lg'),
+  xl: theme('screens.xl')
+) !default;
+
 $grid-columns: 12 !default;
 
 .container {
@@ -15,8 +24,7 @@ $grid-columns: 12 !default;
   &--gutterless {
     @apply mx-0;
 
-    > .col,
-    > [class*='col-'] {
+    > .col {
       @apply px-0;
     }
   }
@@ -40,9 +48,9 @@ $grid-columns: 12 !default;
     }
 
     .#{$prefix}col--auto {
-      flex: 0 0 auto;
       @apply w-auto;
       @apply max-w-full;
+      flex: 0 0 auto;
     }
 
     @for $i from 1 through $grid-columns {

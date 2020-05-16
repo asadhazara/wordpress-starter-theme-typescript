@@ -17,10 +17,16 @@
       {{ function('wp_head') }}
     </head>
     <body id="wpbody" class="{{ body_class }}">
-      {% include 'components/header.twig' %}
+      {% block header %}
+        {% include 'partials/header.twig' %}
+      {% endblock %}
 
       {% block main %}
 
+      {% endblock %}
+
+      {% block footer %}
+        {% include 'partials/footer.twig' %}
       {% endblock %}
 
       {{ function('wp_footer') }}

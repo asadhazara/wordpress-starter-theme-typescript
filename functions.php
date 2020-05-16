@@ -7,7 +7,7 @@ use Timber\Timber;
 if (!defined('ABSPATH')) exit; // Exit if accessed directly.
 
 if (file_exists(dirname(__FILE__) . '/vendor/autoload.php'))
-    require_once dirname(__FILE__) . '/vendor/autoload.php';
+  require_once dirname(__FILE__) . '/vendor/autoload.php';
 
 // load .env
 $dotenv = Dotenv::createImmutable(__DIR__);
@@ -23,7 +23,7 @@ define('MY_ACF_PATH', THEME_DIR . '/vendor/advanced-custom-fields/advanced-custo
 define('MY_ACF_URL', THEME_URI . '/vendor/advanced-custom-fields/advanced-custom-fields-pro/');
 
 // Include the ACF plugin.
-include_once( MY_ACF_PATH . 'acf.php' );
+include_once(MY_ACF_PATH . 'acf.php');
 
 // Initialize funtions
 Init::registerServices();

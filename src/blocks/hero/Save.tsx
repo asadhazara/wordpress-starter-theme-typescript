@@ -21,6 +21,8 @@ const Save: ComponentType<BlockSaveProps<HeroAttributes>> = ({ attributes }) => 
         {backgroundImage && (
           <img
             className="absolute left-0 top-0 h-full w-full object-cover object-center"
+            data-object-fit="cover"
+            data-object-position="center"
             src={backgroundImage.src}
             srcSet={backgroundImage.srcSet}
             alt={backgroundImage.alt}

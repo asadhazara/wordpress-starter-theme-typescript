@@ -5,7 +5,7 @@
     "sourceMap": true,
     "allowJs": true,
     "module": "commonjs",
-    "target": "es5",
+    "target": "esnext",
     "jsx": "preserve",
     "baseUrl": ".",
     "esModuleInterop": true,

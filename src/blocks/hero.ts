@@ -2,9 +2,10 @@
 
 import { BlockConfiguration } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
+import { Image } from 'src/blocks/types/Image';
 
 export type HeroAttributes = {
-  backgroundImage?: { id: number; src: string; srcSet: string; alt: string };
+  backgroundImage?: Image;
   headline: string;
   text: string;
 };
@@ -13,9 +14,8 @@ export const name = 'zorrilla/hero';
 
 export const settings: BlockConfiguration<HeroAttributes> = {
   title: __('Hero'),
-  description: __('Hero banner component.', 'zorrilla'),
+  description: __('Hero Banner Block.', 'zorrilla'),
   category: 'zorrilla',
-  supports: { align: ['full'] },
   keywords: [__('Hero', 'zorrilla')],
   attributes: {
     backgroundImage: {

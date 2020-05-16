@@ -4,6 +4,7 @@ namespace Lib;
 
 use ACF;
 use Lib\Admin\ACFSettings;
+use Lib\Admin\AdminHead;
 use Lib\Admin\AdminMenu;
 use Lib\Base\Activate;
 use Lib\Base\NavMenu;
@@ -25,11 +26,12 @@ final class Init
   {
     return [
       Activate::class,
+      AdminHead::class,
+      AdminMenu::class,
       ACFSettings::class,
       Timber::class,
       Enqueue::class,
       Support::class,
-      AdminMenu::class,
       NavMenu::class,
       Twig::class,
       BlockCategory::class,

@@ -6,10 +6,11 @@ import dotenv from 'dotenv';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import path from 'path';
+import postcssEasingGradients from 'postcss-easing-gradients';
 import postcssFn from 'postcss-functions';
 import tailwindcss from 'tailwindcss';
 import TerserPlugin from 'terser-webpack-plugin';
-import { Configuration, DefinePlugin, Options, ProgressPlugin } from 'webpack';
+import { Configuration, Options, ProgressPlugin } from 'webpack';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 // initiate ENV veriables
@@ -110,7 +111,7 @@ const config: Configuration = {
             loader: 'postcss-loader',
             options: {
               sourceMap: !prod,
-              plugins: [tailwindcss, cssFunctions, autoprefixer()],
+              plugins: [tailwindcss, cssFunctions, postcssEasingGradients, autoprefixer()],
             },
           },
           {
@@ -127,9 +128,6 @@ const config: Configuration = {
   ...(prod ? optimization : {}), // only optimize files on production
   plugins: [
     new ProgressPlugin(),
-    new DefinePlugin({
-      // 'process.env.SECRET_KEY': process.env.SECRET_KEY
-    }),
     new CopyPlugin([
       { from: '**/*', to: 'fonts', context: 'src/fonts' },
       { from: '**/*', to: 'images', context: 'src/images' },
