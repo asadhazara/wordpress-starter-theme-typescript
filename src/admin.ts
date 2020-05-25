@@ -1,6 +1,6 @@
 import 'src/scss/admin.scss';
 import 'src/scss/utilities.scss';
-import 'src/blocks/categories/zorrilla';
+import 'src/block-categories/zorrilla';
 
 import { registerBlockType } from '@wordpress/blocks';
 

@@ -134,7 +134,7 @@ form legend {
 
 ol,
 ul {
-  list-style: none;
+  @apply list-none;
 }
 
 blockquote,

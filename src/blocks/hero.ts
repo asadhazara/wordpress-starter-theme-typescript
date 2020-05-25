@@ -2,7 +2,7 @@
 
 import { BlockConfiguration } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import { Image } from 'src/blocks/types/Image';
+import { Image } from 'types/Image';
 
 export type HeroAttributes = {
   backgroundImage?: Image;
