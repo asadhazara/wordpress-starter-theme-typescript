@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib\Base;
+namespace Zorrilla\Base;
 
 class NavMenu
 {

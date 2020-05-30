@@ -1,46 +1,26 @@
 {
-  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react-hooks", "import", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "prettier"
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react"
   ],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "ecmaFeatures": { "jsx": true }
   },
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "simple-import-sort", "react-hooks", "prettier"],
+  "settings": { "react": { "version": "detect" } },
+  "globals": { "React": "writable" },
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
-    "object-curly-spacing": ["error", "always"],
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "simple-import-sort/sort": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react/prop-types": "off",
-    "react/display-name": "off",
-    "no-console": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 120
-      }
-    ]
-  },
-  "settings": {
-    "react": {
-      "version": "16.9.0"
-    }
-  },
-  "globals": {
-    "React": "writable"
+    "import/order": ["error", { "alphabetize": { "order": "asc" } }],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/prop-types": "off"
   }
 }

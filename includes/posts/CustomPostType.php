@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib\Posts;
+namespace Zorrilla\Posts;
 
 class CustomPostType
 {

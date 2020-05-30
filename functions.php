@@ -1,7 +1,7 @@
 <?php
 
 use Dotenv\Dotenv;
-use Lib\Init;
+use Zorrilla\Init;
 use Timber\Timber;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly.

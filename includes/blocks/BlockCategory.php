@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib\Blocks;
+namespace Zorrilla\Blocks;
 
 class BlockCategory
 {

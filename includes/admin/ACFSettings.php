@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib\Admin;
+namespace Zorrilla\Admin;
 
 class ACFSettings
 {

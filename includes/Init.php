@@ -1,19 +1,19 @@
 <?php
 
-namespace Lib;
+namespace Zorrilla;
 
 use ACF;
-use Lib\Admin\ACFSettings;
-use Lib\Admin\AdminHead;
-use Lib\Admin\AdminMenu;
-use Lib\Base\Activate;
-use Lib\Base\NavMenu;
-use Lib\Base\Enqueue;
-use Lib\Base\Support;
-use Lib\Base\Twig;
-use Lib\Blocks\BlockCategory;
-use Lib\Blocks\CustomBlockType;
-use Lib\Posts\CustomPostType;
+use Zorrilla\Admin\ACFSettings;
+use Zorrilla\Admin\AdminHead;
+use Zorrilla\Admin\AdminMenu;
+use Zorrilla\Base\Activate;
+use Zorrilla\Base\NavMenu;
+use Zorrilla\Base\Enqueue;
+use Zorrilla\Base\Support;
+use Zorrilla\Base\Twig;
+use Zorrilla\Blocks\BlockCategory;
+use Zorrilla\Blocks\CustomBlockType;
+use Zorrilla\Posts\CustomPostType;
 use Timber\Timber;
 
 final class Init
