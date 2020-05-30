@@ -9,8 +9,11 @@
   ],
   "autoload": {
     "psr-4": {
-      "Zorrilla\\": "./includes"
-    }
+      "Zorrilla\\": "includes"
+    },
+    "classmap": [
+      "includes"
+    ]
   },
   "require-dev": {
     "php-stubs/wordpress-stubs": "^5.3"

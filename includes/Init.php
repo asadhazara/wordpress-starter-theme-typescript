@@ -2,7 +2,6 @@
 
 namespace Zorrilla;
 
-use ACF;
 use Zorrilla\Admin\ACFSettings;
 use Zorrilla\Admin\AdminHead;
 use Zorrilla\Admin\AdminMenu;

@@ -8,6 +8,9 @@ class Enqueue
 {
   public function register()
   {
+    // disable all woocommerce styles
+    add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
     // admin scripts
     add_action('admin_enqueue_scripts', array($this, 'adminEnqueue'));
 
