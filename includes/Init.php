@@ -14,6 +14,8 @@ use Zorrilla\Blocks\BlockCategory;
 use Zorrilla\Blocks\CustomBlockType;
 use Zorrilla\Posts\CustomPostType;
 use Timber\Timber;
+use Zorrilla\Admin\CustomRoles;
+use Zorrilla\WooCommerce\RestApi;
 
 final class Init
 {
@@ -25,9 +27,12 @@ final class Init
   {
     return [
       Activate::class,
+
       AdminHead::class,
       AdminMenu::class,
       ACFSettings::class,
+      CustomRoles::class,
+
       Timber::class,
       Enqueue::class,
       Support::class,
@@ -35,7 +40,9 @@ final class Init
       Twig::class,
       BlockCategory::class,
       CustomBlockType::class,
-      CustomPostType::class
+      CustomPostType::class,
+
+      // RestApi::class,
     ];
   }
 

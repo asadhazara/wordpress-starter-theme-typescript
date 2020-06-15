@@ -24,5 +24,8 @@ class Support
     add_theme_support('post-thumbnails');
 
     add_theme_support('html5', array('comment-form', 'comment-list', 'gallery', 'caption'));
+
+    // woocommerce
+    add_theme_support('woocommerce');
   }
 }

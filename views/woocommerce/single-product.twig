@@ -1,0 +1,13 @@
+{% extends 'base.twig' %}
+
+{% block header %}
+  {{ post.content }}
+{% endblock %}
+
+{% block main %}
+  {{ product.get_title }}
+{% endblock %}
+
+{% block footer %}
+  {{ post.content }}
+{% endblock %}

@@ -15,15 +15,12 @@
       "includes"
     ]
   },
-  "require-dev": {
-    "php-stubs/wordpress-stubs": "^5.3"
-  },
   "require": {
     "symfony/var-dumper": "^5.0",
     "timber/timber": "^1.15",
     "vlucas/phpdotenv": "^4.1",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8",
-    "cbschuld/browser.php": "^1.9"
+    "php-stubs/woocommerce-stubs": "^4.2"
   },
   "repositories": [
     {

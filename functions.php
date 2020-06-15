@@ -29,7 +29,7 @@ include_once(MY_ACF_PATH . 'acf.php');
 Init::registerServices();
 
 // set timber view 
-Timber::$dirname = array('templates', 'views');
+Timber::$dirname = array('views', 'views');
 
 // Load Routes
 $routes = glob(__DIR__ . '/lib/routes/*.php');
