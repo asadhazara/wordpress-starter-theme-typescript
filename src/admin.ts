@@ -4,7 +4,7 @@ import 'src/block-categories/zorrilla';
 
 import { registerBlockType } from '@wordpress/blocks';
 
-const context = require.context('src/blocks', true, /.ts$/);
+const context = require.context('src/blocks', true, /\.ts$/);
 const iconContext = require.context('src/blocks', true, /Icon\.tsx$/);
 const editContext = require.context('src/blocks', true, /Edit\.tsx$/);
 const saveContext = require.context('src/blocks', true, /Save\.tsx$/);
